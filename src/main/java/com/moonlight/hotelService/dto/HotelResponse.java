@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,4 +20,6 @@ public class HotelResponse {
     private String hotelName;
     private String about;
     private String location;
+    private OverAllRating overAllRating;
+    List<UserRatingDTO> ratings;
 }

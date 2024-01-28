@@ -20,7 +20,7 @@ public class HotelController {
                 .body(new AppResponse(hotelService.saveHotelDetails(hotelRequest)));
     }
 
-    @GetMapping(value = "/get/{userId}")
+    @GetMapping(value = "/get/{hotelId}")
     public ResponseEntity<AppResponse> getHotelDetail(Integer hotelId) {
         return ResponseEntity.ok()
                 .body(new AppResponse(hotelService.getHotelInfo(hotelId)));
