@@ -18,9 +18,12 @@ spring:
   application:
     name: HOTEL-SERVICE
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+# added configServer it will download required configuration form the config-server
+  config:
+    import: optional:configserver:http://localhost:8085
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
